@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="quiz-card" class="card-effect">
+    <h1 class="quiz-title">Quiz Website</h1>
+    
+    <div id="form-section" class="card-section">
+      <label>Name: <input type="text" id="player-name" required></label>
+      <label>Category: 
+        <select id="participant-category">
+          <option value="children">Children</option>
+          <option value="school">School Student</option>
+          <option value="college">College Student</option>
+          <option value="university">University</option>
+          <option value="others">Others</option>
+        </select>
+      </label>
+      <label>Subject: 
+        <select id="subject-category">
+          <option value="general">General</option>
+          <option value="science">Science</option>
+          <option value="math">Math</option>
+          <option value="history">History</option>
+          <option value="sports">Sports</option>
+        </select>
+      </label>
+      <label>Difficulty:
+        <select id="difficulty-level">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <button id="start-quiz-btn" class="main-btn">Start Quiz</button>
+    </div>
+    
+    <div id="quiz-section" class="card-section" style="display:none;">
+      <div class="timer"><span id="timer-count"></span>s</div>
+      <div id="question-area"></div>
+      <div id="options-area"></div>
+      <div class="navigation">
+        <button id="back-btn" class="nav-btn">Back</button>
+        <button id="next-btn" class="nav-btn">Next</button>
+      </div>
+    </div>
+    
+    <div id="scorecard-section" class="card-section" style="display:none;">
+      <h2>Scorecard</h2>
+      <ul id="score-list"></ul>
+      <div class="controls">
+        <button id="suggestion-btn" class="main-btn">Suggestion</button>
+        <button id="reset-btn" class="main-btn">Reset</button>
+        <button id="home-btn" class="main-btn">Home</button>
+      </div>
+    </div>
+    
+    <div id="leaderboard-section" class="card-section" style="display:none;">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboard-list"></ul>
+    </div>
+
+    <div id="chatbox" class="chatbox">
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Ask about subjects/help...">
+      <button id="chat-send" class="main-btn">Send</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
